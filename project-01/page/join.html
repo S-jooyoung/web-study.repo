@@ -205,7 +205,10 @@
 <script>
   $(document).ready(function () {
     $(".ag-btn01").click(function () {
-      $("#layer").addClass("active");
+      //$("#layer").addClass("active");
+
+      $(".pop-layer").fadeIn(500);
+      $("#layer").fadeIn(500);
     });
   });
 </script>
@@ -214,6 +217,9 @@
   $(document).ready(function () {
     $(".quit-btn").click(function () {
       $("#layer").removeClass("active");
+
+      $(".pop-layer").fadeOut(500);
+      $("#layer").fadeOut(500);
     });
   });
 </script>
