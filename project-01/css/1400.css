@@ -1,0 +1,21 @@
+.wrap .foot-content .introduce > ul {
+  flex-direction: column;
+}
+
+.wrap .foot-content .foot-last span {
+  display: flex;
+}
+
+footer .wrap .wrap-content {
+  flex-direction: column;
+  width: 100%;
+}
+
+.wrap .wrap-content > div.mapview {
+  width: 100%;
+}
+
+.wrap .wrap-content > div.foot-content {
+  width: 100%;
+  font-size: 15px;
+}

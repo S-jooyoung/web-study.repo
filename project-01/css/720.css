@@ -1,0 +1,241 @@
+.business-box .business-list li {
+  width: 100%;
+  padding: 20px;
+}
+
+.business-box .b-img > img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+footer .wrap-content {
+  flex-direction: column;
+}
+
+.wrap .wrap-content > div.mapview {
+  width: 100%;
+}
+
+.wrap .wrap-content > div.foot-content {
+  width: 100%;
+}
+
+.wrap .foot-content .introduce > ul {
+  flex-direction: column;
+}
+
+.wrap .foot-content .foot-last span {
+  display: flex;
+}
+
+.top-hd-right > .sch-box {
+  display: none;
+}
+
+header .bt-hd {
+  height: 50px;
+}
+
+nav {
+  transform: translate(-100%, 0px);
+  transition: all 0.3s;
+}
+
+nav.active {
+  transform: translate(0%, 0px);
+  background-color: #eb9a53bd;
+}
+
+nav.active ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+.sumary-test {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.summary .imgtxt-content {
+  height: 120px;
+  width: 120px;
+  line-height: 120px;
+  margin: 0 auto;
+}
+
+.company-box .box ul {
+  flex-direction: column;
+  padding-top: 0;
+}
+
+.company-box .box ul li {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.business-box .business-txt h1 {
+  font-size: 25px;
+}
+
+.business-box .business-txt p {
+  font-size: 15px;
+}
+.slide-txt {
+  padding: 0 20px;
+}
+.slide-txt h2 {
+  font-size: 20px;
+}
+
+.slide-txt p {
+  font-size: 17px;
+}
+.business-box {
+  height: auto;
+}
+.business-box .b-img {
+  height: auto;
+}
+
+.business-box .b-text {
+  height: auto;
+  max-width: none;
+  padding-bottom: 20px;
+}
+
+.business-box .b-text h2 {
+  font-size: 21px;
+  padding: 10px 0px;
+}
+.business-box .b-text h2 span {
+  font-size: 12px;
+}
+.business-box .b-text p {
+  font-size: 12px;
+  height: auto;
+  max-width: none;
+}
+
+.login-wrap {
+  max-width: 320px;
+}
+
+.login-wrap .log-box {
+  padding: 10px;
+}
+
+.join-btn a {
+  padding: 3% 30%;
+}
+
+.join-wrap .join-box ul li.auth button {
+  font-size: 12px;
+}
+
+.join-wrap {
+  height: auto;
+  flex-direction: column;
+}
+
+.join-wrap .join-box {
+  width: 100%;
+  padding: 20px;
+}
+
+.join-wrap .join-check {
+  width: 100%;
+  padding: 20px;
+  margin-left: 0px;
+}
+
+.pop-layer {
+  height: 50%;
+}
+
+.pop-layer .pop-banner > p {
+  font-size: 15px;
+}
+
+.pop-layer .pop-banner > p a {
+  right: 10px;
+}
+
+.summary > div {
+  padding: 20px;
+  width: 50%;
+}
+
+.viewpage-wrap article section:last-child {
+  flex-direction: column;
+}
+
+.viewpage-wrap article section:last-child .view-right {
+  padding: 30px 0px;
+}
+
+.sub01-wrap .sub-main-box .sub-content ul li {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sub01-wrap .sub-main-box .sub-content ul li p.date {
+  width: auto;
+}
+
+.sub01-wrap .sub-main-box .sub-content ul li span.sub-img-size {
+  width: auto;
+  height: auto;
+}
+
+.sub01-wrap .sub-main-box .sub-title {
+  font-size: 12px;
+}
+
+.slide-txt p {
+  word-break: keep-all;
+}
+.slide-txt p br {
+  display: none;
+}
+
+.company-box .box ul li .text span {
+  font-size: 12px;
+  display: block;
+  margin: 5px 0;
+}
+
+.company-box .box ul li .text h1 {
+  font-size: 17px;
+}
+
+.company-box .box ul li .imgtxt {
+  height: 170px;
+  line-height: 170px;
+}
+.company-box .box ul li .text p {
+  font-size: 12px;
+}
+
+.business-box .business-txt {
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 0px;
+}
+
+.business-box .business-list ul {
+  flex-wrap: wrap;
+}
+
+.wrap .foot-content .foot-last span {
+  width: 100%;
+  font-size: 12px;
+}

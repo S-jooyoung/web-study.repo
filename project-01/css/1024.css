@@ -1,0 +1,28 @@
+.business-box .business-list li {
+  width: 33%;
+}
+
+.business-box .b-img > img {
+  width: 100%;
+  height: 100%;
+}
+
+footer .wrap-content {
+  flex-direction: column;
+}
+
+.wrap .wrap-content > div.mapview {
+  width: 100%;
+}
+
+.wrap .wrap-content > div.foot-content {
+  width: 100%;
+}
+
+.wrap .foot-content .introduce > ul {
+  flex-direction: column;
+}
+
+.wrap .foot-content .foot-last span {
+  display: flex;
+}
