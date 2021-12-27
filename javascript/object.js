@@ -30,7 +30,7 @@ print2(jooyoung);
 // can add properties later
 jooyoung.hasJob = true;
 console.log(jooyoung);
-
+ 
 //can delete propeties later
 delete jooyoung.hasJob;
 console.log(jooyoung);
