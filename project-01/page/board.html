@@ -1,4 +1,118 @@
 <?php include("../page/header.html"); ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Generator" content="Editpuls" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minmum-scale=0,maximum-scale=10,user-scalable=yes"
+    />
+
+    <link rel="stylesheet" href="/project-01/css/set.css" />
+    <link rel="stylesheet" href="/project-01/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      media="screen and (min-width): 1400px)"
+      href="/web/04/css/pc.css"
+    />
+
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 1024px) and (max-width:1400px)"
+      href="/web/04/css/1400.css"
+    />
+
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 721px) and (max-width:1024px)"
+      href="/web/04/css/1024.css"
+    />
+
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 320px) and (max-width:720px)"
+      href="/web/04/css/720.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a4196a8ce8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://artbyus.co.kr/js/jquery-1.12.4.min.js"></script>
+
+    <title>휴스타 실습</title>
+  </head>
+  <body>
+    <header>
+      <div class="top-hd">
+        <!-- 왼쪽 header-->
+        <div class="top-hd-left">
+          <div class="logo">
+            <a href="/web/04/">
+              <i class="fab fa-accusoft"></i>
+              <span>HUSTAR</span>
+            </a>
+          </div>
+        </div>
+
+        <!--  오른쪽 header -->
+        <div class="top-hd-right">
+          <div class="sch-box">
+            <form action="./fgfh.php">
+              <div>
+                <input
+                  type="text"
+                  class="sch-box_p"
+                  id="comonSrch02"
+                  placeholder="원하는 정보를 검색하세요"
+                  value
+                  search="p"
+                />
+                <button class="btnsearch_p">
+                  <i class="fas fa-search fa-2x"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="login-btn-box">
+            <a href="/web/04/page/login.html">
+              <i class="fab fa-accusoft"></i>
+              <span>로그인</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bt-hd">
+        <nav>
+          <ul>
+            <li><a href="/web/04/page/sub01.html">대구 미래형자동차산업</a></li>
+            <li><a href="/web/04/page/new_list.html">대구 의료산업</a></li>
+            <li><a href="">대구 ICT산업</a></li>
+            <li><a href="">대구 물산업</a></li>
+          </ul>
+        </nav>
+        <a href="#none" class="m_menu"><i class="fas fa-bars"></i></a>
+      </div>
+    </header>
+
+    <script>
+      $(document).ready(function () {
+        $(".m_menu").click(function () {
+          $("nav").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
 
 <div class="board-wrap">
   <div class="board-title">
@@ -25,4 +139,90 @@
   </div>
 </div>
 
+<div class="line-tag"></div>
+<div class="max-wrap">
+    <footer>
+      <div class="wrap">
+        <div class="wrap-content">
+          <div class="mapview">
+            <!-- * 카카오맵 - 지도퍼가기 -->
+            <!-- 1. 지도 노드 -->
+            <div
+              id="daumRoughmapContainer1635917999781"
+              class="root_daum_roughmap root_daum_roughmap_landing"
+            ></div>
+            <div class="intro-text">
+              <h3></h3>
+              <p></p>
+            </div>
+
+            <!--
+  2. 설치 스크립트
+  * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+            <script
+              charset="UTF-8"
+              class="daum_roughmap_loader_script"
+              src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+            ></script>
+
+            <!-- 3. 실행 스크립트 -->
+            <script charset="UTF-8">
+              new daum.roughmap.Lander({
+                timestamp: "1635917999781",
+                key: "27w8x",
+                mapWidth: "640",
+                mapHeight: "360",
+              }).render();
+            </script>
+          </div>
+
+          <div class="foot-content">
+            <div class="logo">
+              <i class="fab fa-accusoft"></i>
+              <span>HUSTAR</span>
+            </div>
+
+            <div class="introduce">
+              <ul>
+                <li>상호명 : 더비</li>
+                <li>대표 : 신주영</li>
+                <li>사업자등록번호: 213-42-621432</li>
+              </ul>
+              <ul>
+                <li>대구 동구 동내로 70 3D융합기술지원센터</li>
+                <li>이메일:jooyoung.dev@gmail.com</li>
+              </ul>
+            </div>
+            <div class="foot-txt">
+              휴스타 클론 홈페이지는 공부목적의 홈페이지이며 
+              본 내용에 제시된 내용은 아무런 연관이 없고 그에 따른
+              정보 및 거래에 대해 책임지지 않습니다. 
+            
+            </div>
+            <div class="foot-last">
+              <span> 1234-1234 </span> (13:00 ~ 1800 토,일 공휴일 휴무)
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+</body>
+</html>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+  });
+</script>
+</body>
+</html>
 <?php include("../page/footer.html"); ?>
