@@ -62,16 +62,18 @@ const userStorage = new UserStorage();
 const id = prompt("아이디를 입력하세요");
 const password = prompt("비밀번호를 입력하세요");
 
-userStorage.loginUser(id,password,getRoles(
+userStorage.loginUser(
     id,
     password,
-    userWithRole=>{
-    alert(`Hello ${userWithRole.name} your Role is ${userWithRole.role}`);
+    user =>{
+        userStorage.getRoles(
+            user,
+            userWithRole=> {
+            alert(`Hello ${userWithRole.name}, you hava a ${userWithRole.role} role`)
+        },
+        error => {
+            console.log(error);
+        });
     },
-    error => {
-        console.log(error);
-    }),
-    error=>{
-        console.log("로그인에 실패하셨습니다.");
-    },
+    error => console.log(error)
 );
