@@ -52,17 +52,21 @@ const getHen = () =>
 const getEgg = hen =>
     new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve(`${hen} => 알`);
+            reject(new Error(`error! ${hen}=> 🥚`))
         }, 1000);
     });
 const cook = egg =>
     new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve(`${egg} => 요리`);
+            resolve(`${egg} => 🍳`);
         }, 1000);
     });
 
 getHen()
     .then(getEgg)
+    .catch(error =>{
+        return '🥖';
+    })
     .then(cook)
-    .then(console.log);
+    .then(console.log)
+    .catch(console.log)
