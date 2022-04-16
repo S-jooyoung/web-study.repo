@@ -11,7 +11,7 @@ import renderer from "react-test-renderer";
 
 // the component to test
 
-describe("HavitAddForm", () => {
+describe("HabitAddForm", () => {
   it("renders", () => {
     // snapshot testing
     const component = renderer.create(<HabitAddForm onAdd={jest.fn()} />);
