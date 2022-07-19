@@ -57,5 +57,3 @@
   acceptSomeObject({ name: "ellie" });
   acceptSomeObject({ animal: "dog" });
 }
-
-console.log("hello");
