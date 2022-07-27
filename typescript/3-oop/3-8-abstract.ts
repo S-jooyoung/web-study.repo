@@ -8,6 +8,7 @@
   // public
   // private
   // protected
+
   interface CoffeeMaker {
     makeCoffee(shots: number): CoffeeCup;
   }
