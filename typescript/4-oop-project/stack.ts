@@ -11,7 +11,7 @@
   }
 
   class Stackimpl implements Stack {
-    private _size: number;
+    private _size: number = 0;
     private head?: StackNode;
 
     get size(): number {
@@ -30,8 +30,19 @@
       }
       const node = this.head;
       this.head = node.next;
+      this._size--;
 
       return node.value;
     }
+  }
+
+  const stack = new Stackimpl();
+
+  stack.push("JOO 1");
+  stack.push("YOUNG 2");
+  stack.push("SHIN 3");
+
+  while (stack.size !== 0) {
+    console.log(stack.pop());
   }
 }
