@@ -8,7 +8,7 @@
 
   type VideoMetadata = Omit<Video, "url" | "data">;
 
-  function getVideo(id: string): Video {
+  function WgetVideo(id: string): Video {
     return {
       id,
       title: "video",
@@ -17,7 +17,7 @@
     };
   }
 
-  function getVideoMetadata(id: string): VideoMetadata {
+  function WgetVideoMetadata(id: string): VideoMetadata {
     return {
       id,
       title: "title",
