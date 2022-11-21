@@ -9,7 +9,7 @@ export default function AppMentor(props) {
       title: '시니어개발자',
     },
   });
-
+  x;
   const updatePersonName = (target) => {
     const name = prompt(`what's your mentor's name?`);
     setPerson((prev) => ({ ...prev, mentor: { ...prev.mentor, name } }));
