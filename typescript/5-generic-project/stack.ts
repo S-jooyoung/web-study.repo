@@ -6,33 +6,27 @@
   }
 
   type StackNode<T> = {
-    value: T;
-    next?: StackNode<T>;
+    readonly value: T;
+    readonly next?: StackNode<T>;
   };
 
-  class Stackimpl<T> implements Stack<T> {
+  class StackImpl<T> implements Stack<T> {
     private _size: number = 0;
     private head?: StackNode<T>;
 
-    constructor(private capacity: number) {}
-
-    get size(): number {
+    get size() {
       return this._size;
     }
 
     push(value: T) {
-      if (this._size === this.capacity) {
-        throw new Error("Stack is Full!");
-      }
-      const node = { value, next: this.head };
+      const node: StackNode<T> = { value, next: this.head };
       this.head = node;
       this._size++;
     }
 
     pop(): T {
-      if (this.head == null) {
-        throw new Error("Stack is Empty!");
-      }
+      if (this.head == null) throw new Error("doesn't exist");
+
       const node = this.head;
       this.head = node.next;
       this._size--;
@@ -41,19 +35,17 @@
     }
   }
 
-  const stack = new Stackimpl<string>(3);
-  stack.push("JOO 1");
-  stack.push("YOUNG 2");
-  stack.push("SHIN 3");
-  while (stack.size !== 0) {
-    console.log(stack.pop());
+  const test = new StackImpl<string>();
+  test.push("string1");
+  test.push("test2");
+  while (test.size !== 0) {
+    console.log(test.pop());
   }
 
-  const stack2 = new Stackimpl<number>(3);
-  stack2.push(123);
-  stack2.push(456);
-  stack2.push(789);
-  while (stack2.size !== 0) {
-    console.log(stack2.pop());
+  const test2 = new StackImpl<number | string>();
+  test2.push(123);
+  test2.push("test2");
+  while (test2.size !== 0) {
+    console.log(test2.pop());
   }
 }
