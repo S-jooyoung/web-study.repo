@@ -13,8 +13,6 @@
     return arg;
   }
 
-  const result = checkNotNullAnyBad(123);
-
   function checkNotNull<T>(arg: T | null): T {
     if (arg == null) {
       throw new Error("not valid number!");
@@ -22,6 +20,11 @@
     return arg;
   }
 
-  const number = checkNotNull(123);
-  const boal: boolean = checkNotNull(true);
+  const resultBad = checkNotNullAnyBad(123);
+  const resultGoodNumber: number = checkNotNull(123);
+  const resultGoodBoolean: boolean = checkNotNull(true);
+
+  console.log(resultBad);
+  console.log(resultGoodNumber);
+  console.log(resultGoodBoolean);
 }
