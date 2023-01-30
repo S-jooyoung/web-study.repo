@@ -24,7 +24,7 @@
     return employee;
   }
 
-  function pay<T extends Employee>(employee: T): T {
+  function payGood<T extends Employee>(employee: T): T {
     employee.pay();
     return employee;
   }
@@ -32,24 +32,31 @@
   const jooyoung = new FullTimeEmployee();
   const bob = new PartTimeEmployee();
 
-  jooyoung.workFullTime();
-  bob.workPartTime();
+  // const jooyoungAfterPay = payBad(jooyoung);
+  // const bobAfterPay = payBad(bob);
 
-  const jooyoungAfterPay = pay(jooyoung);
-  const bobAfterPay = pay(bob);
+  const jooyoungAfterPay = payGood(jooyoung);
+  const bobAfterPay = payGood(bob);
 
-  // ------------------------------------------
+  console.log(jooyoungAfterPay.workFullTime);
+  console.log(bobAfterPay.workPartTime);
+
+  /**
+   * -------------------------------------------------
+   *
+   */
+
   const obj = {
     name: "jooyoung",
-    age: 27,
+    age: "27",
   };
 
   const obj2 = {
     animal: "🐶",
   };
 
-  function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
-    return obj[key];
+  function getValue<T, K extends keyof T>(object: T, key: K): T[K] {
+    return object[key];
   }
 
   console.log(getValue(obj, "name")); // jooyoung
