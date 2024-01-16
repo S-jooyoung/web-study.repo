@@ -2,12 +2,19 @@ from bs4 import BeautifulSoup
 from flask import Flask, jsonify, render_template, request
 from pymongo import MongoClient
 from flask_cors import CORS
-
+from dotenv import load_dotenv
 import requests
+import os
+
+load_dotenv()  # 환경변수 파일 로드
+
+
 app = Flask(__name__)
 CORS(app)
 
-client = MongoClient('mongodb+srv://sparta:jungle@cluster0.rxjukf7.mongodb.net/?retryWrites=true&w=majority')
+mongo_uri = os.environ.get('MONGO_URI')
+
+client = MongoClient(mongo_uri)
 db = client.db_jungle
 
 @app.route('/')
