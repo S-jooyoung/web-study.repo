@@ -1,12 +1,12 @@
 import { ApolloServer, gql } from "apollo-server";
 
-const Tweets = [
+let Tweets = [
   {
-    id: 1,
+    id: "1",
     text: "Hello World",
   },
   {
-    id: 2,
+    id: "2",
     text: "Bye World",
   },
 ];
@@ -38,6 +38,23 @@ const resolvers = {
     },
     tweet: (_, { id }) => {
       return Tweets.find((tweet) => tweet.id === id);
+    },
+  },
+  Mutation: {
+    createTweet: (_, { text, userId }) => {
+      const newTweet = {
+        id: Tweets.length + 1,
+        userId,
+        text,
+      };
+      Tweets.push(newTweet);
+      return newTweet;
+    },
+    deleteTweet: (_, { id }) => {
+      const tweetIndex = Tweets.findIndex((tweet) => tweet.id === id);
+      if (tweetIndex === -1) return false;
+      Tweets.splice(tweetIndex, 1);
+      return true;
     },
   },
 };
