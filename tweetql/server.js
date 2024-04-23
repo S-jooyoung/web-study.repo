@@ -11,10 +11,25 @@ let Tweets = [
   },
 ];
 
+const Users = [
+  {
+    id: "1",
+    firstName: "John",
+    lastName: "Doe",
+  },
+  {
+    id: "2",
+    firstName: "Jane",
+    lastName: "Doe",
+  },
+];
+
 const typeDefs = gql`
   type User {
-    id: ID
-    username: String
+    id: ID!
+    firstName: String!
+    lastName: String!
+    fullName: String!
   }
   type Tweet {
     id: ID
@@ -22,7 +37,8 @@ const typeDefs = gql`
     author: User
   }
   type Query {
-    allTweets: [Tweet]
+    allUsers: [User!]!
+    allTweets: [Tweet!]!
     tweet(id: ID!): Tweet
   }
   type Mutation {
@@ -33,6 +49,9 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
+    allUsers: () => {
+      return Users;
+    },
     allTweets: () => {
       return Tweets;
     },
@@ -55,6 +74,11 @@ const resolvers = {
       if (tweetIndex === -1) return false;
       Tweets.splice(tweetIndex, 1);
       return true;
+    },
+  },
+  User: {
+    fullName: ({ firstName, lastName }) => {
+      return `${firstName} ${lastName}`;
     },
   },
 };
