@@ -39,12 +39,27 @@ const typeDefs = gql`
     author: User
   }
   type Query {
+    """
+    Returns all Users
+    """
     allUsers: [User!]!
+    """
+    Returns all Tweets
+    """
     allTweets: [Tweet!]!
+    """
+    Returns a Tweet if it exists, else returns null
+    """
     tweet(id: ID!): Tweet
   }
   type Mutation {
+    """
+    Creates a new Tweet
+    """
     createTweet(text: String!, userId: ID!): Tweet
+    """
+    Deleted a Tweet if it exists, else returns false
+    """
     deleteTweet(id: ID!): Boolean
   }
 `;
