@@ -72,6 +72,10 @@ const typeDefs = gql`
     """
     allMovies: [Movie!]!
     """
+    Returns a Movie if it exists, else returns null
+    """
+    movie(id: ID!): Movie
+    """
     Returns all Tweets
     """
     allTweets: [Tweet!]!
@@ -104,6 +108,11 @@ const resolvers = {
       return fetch("https://yts.mx/api/v2/list_movies.json")
         .then((res) => res.json())
         .then((res) => res.data.movies);
+    },
+    movie: (_, { id }) => {
+      return fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+        .then((res) => res.json())
+        .then((res) => res.data.movie);
     },
     tweet: (_, { id }) => {
       return Tweets.find((tweet) => tweet.id === id);
